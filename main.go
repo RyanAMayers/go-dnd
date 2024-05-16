@@ -3,11 +3,11 @@ package main
 import (
 	"fmt"
 
-	"RyanAMayers/godnd"
+	gameActions "github.com/RyanAMayers/godnd/gameActions"
 )
 
 func main() {
-	firstRoll := godnd.D20()
+	firstRoll := gameActions.D20()
 
 	fmt.Printf("You rolled a %d!\n", firstRoll)
 }

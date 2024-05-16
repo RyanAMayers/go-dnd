@@ -1,4 +1,4 @@
-package godnd
+package gameActions
 
 import (
 	"fmt"
@@ -11,12 +11,18 @@ func Roll(dieString string) (total int, rolls []int) {
 }
 
 func RollSingle(die int) int {
+	if die < 1 {
+		return 0
+	}
 	return rand.Intn(die) + 1
 }
 
 func RollN(die, n int) (total int, rolls []int) {
 	rolls = []int{}
 	total = 0
+	if n < 1 || die < 1 {
+		return total, rolls
+	}
 	for i := 0; i < n; i++ {
 		rolls = append(rolls, RollSingle(die))
 		total += rolls[i]
