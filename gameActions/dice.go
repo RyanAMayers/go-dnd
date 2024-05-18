@@ -3,7 +3,12 @@ package gameActions
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
+
+func init() {
+	rand.NewSource(time.Now().UnixNano())
+}
 
 func Roll(dieString string) (total int, rolls []int) {
 	die, n := parseDieString(dieString)

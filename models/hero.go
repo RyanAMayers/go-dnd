@@ -1,37 +1,41 @@
 package godnd
 
-import (
-	"fmt"
-)
-
 // Hero is a struct that represents a Dungeons and Dragons character.
 // It has fields for the character's name, level, raw ability scores,
 // maximum hit points, class, subclass, background, and other base data.
 // This will represent the BASE STATS of a character, at level one.
 type Hero struct {
-	Name            string
-	Level           int
+	FullName        string
+	ShortName       string
+	TotalLevel      int
 	MaxHP           int
 	Classes         []PlayerClass
 	Background      string
 	Race            string
 	AlignmentSocial string
 	AlignmentMoral  string
-	STR             int
-	DEX             int
-	CON             int
-	INT             int
-	WIS             int
-	CHA             int
+	AbilityScores   AbilityScores
+}
+
+// AbilityScores is a struct that represents a Dungeons and Dragons character's
+// raw ability scores. These scores are used to calculate the character's
+// modifiers, which are used in various calculations throughout the game.
+type AbilityScores struct {
+	STR int
+	DEX int
+	CON int
+	INT int
+	WIS int
+	CHA int
 }
 
 // PlayerClass is a struct that represents a Dungeons and Dragons class.
 // A hero can have multiple classes, and each class has a subclass and
-// ajn independent level.
+// an independent level.
 type PlayerClass struct {
-	class *Class
+	Class Class
 	// subclass *Subclass
-	level int
+	Level int
 }
 
 type Class struct {
@@ -45,8 +49,4 @@ type Class struct {
 	SkillProficiencies  []string
 	Spellcaster         bool
 	// Subclasses          []Subclass
-}
-
-func main() {
-	fmt.Println("Hello, World!")
 }
