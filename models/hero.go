@@ -1,4 +1,4 @@
-package godnd
+package models
 
 // Hero is a struct that represents a Dungeons and Dragons character.
 // It has fields for the character's name, level, raw ability scores,
@@ -36,17 +36,4 @@ type PlayerClass struct {
 	Class Class
 	// subclass *Subclass
 	Level int
-}
-
-type Class struct {
-	Name                string
-	HitDie              int
-	PrimaryAbility      string
-	SavingThrows        []string
-	ArmorProficiencies  []string
-	WeaponProficiencies []string
-	ToolProficiencies   []string
-	SkillProficiencies  []string
-	Spellcaster         bool
-	// Subclasses          []Subclass
 }

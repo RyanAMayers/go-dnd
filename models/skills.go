@@ -1,4 +1,4 @@
-package godnd
+package models
 
 // SkillAbilityMap is a map that holds all the skills in D&D and their associated abilities.
 // This map is used to determine which ability modifier to use when making a skill check.
