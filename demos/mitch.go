@@ -5,23 +5,13 @@ import (
 )
 
 var Mitch models.Hero = models.Hero{
-	FullName:   "The Mighty Fearsome Mitch",
+	FullName:   "The Mighty, Fearsome Mitch",
 	ShortName:  "Mitch",
 	TotalLevel: 1,
 	MaxHP:      14,
 	Classes: []models.PlayerClass{
 		{
-			Class: models.Class{
-				Name:                "Barbarian",
-				HitDie:              12,
-				PrimaryAbility:      "STR",
-				SavingThrows:        []string{"STR", "CON"},
-				ArmorProficiencies:  []string{"Light Armor", "Medium Armor", "Shields"},
-				WeaponProficiencies: []string{"Simple Weapons", "Martial Weapons"},
-				ToolProficiencies:   []string{"None"},
-				SkillProficiencies:  []string{"Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"},
-				Spellcaster:         false,
-			},
+			Class: models.Barbarian,
 			Level: 1,
 		},
 	},

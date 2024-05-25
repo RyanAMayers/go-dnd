@@ -28,12 +28,3 @@ type AbilityScores struct {
 	WIS int
 	CHA int
 }
-
-// PlayerClass is a struct that represents a Dungeons and Dragons class.
-// A hero can have multiple classes, and each class has a subclass and
-// an independent level.
-type PlayerClass struct {
-	Class Class
-	// subclass *Subclass
-	Level int
-}

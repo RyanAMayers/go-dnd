@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/RyanAMayers/godnd/demos"
 	gameActions "github.com/RyanAMayers/godnd/gameActions"
 )
 
@@ -114,6 +115,7 @@ func TestRollDice(t *testing.T) {
 }
 
 func TestHeroRolls(t *testing.T) {
+	mitch := demos.Mitch
 
 	result := gameActions.Check("Athletics", mitch.AbilityScores)
 	if result < 1 || result > 30 {

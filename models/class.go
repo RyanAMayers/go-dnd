@@ -24,3 +24,8 @@ type ClassFeature struct {
 	Name        string
 	Description string
 }
+
+type PlayerClass struct {
+	Class interface{}
+	Level int
+}
